@@ -1,0 +1,1 @@
+## bgforge.yml schema
