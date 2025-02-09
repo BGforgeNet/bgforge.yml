@@ -76,8 +76,17 @@
                     "type": "array",
                     "description": "List of platforms.",
                     "items": {
-                        "type": "string"
-                    }
+                        "type": "string",
+                        "enum": [
+                            "tob",
+                            "bgee",
+                            "bg2ee",
+                            "bgt",
+                            "sod",
+                            "eet"
+                        ]
+                    },
+                    "uniqueItems": true
                 },
                 "happy": {
                     "type": "boolean",
@@ -101,6 +110,11 @@
                         "directory": {
                             "type": "string",
                             "description": "Directory for MLS translations."
+                        },
+                        "auto_tra": {
+                            "type": "boolean",
+                            "default": true,
+                            "description": "Match files to translations using basename, like WeiDU AUTO_TRA."
                         }
                     },
                     "required": [
