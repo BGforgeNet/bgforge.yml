@@ -36,12 +36,12 @@
                 "extract_format": {
                     "type": "string",
                     "default": "",
-                    "description": "Optional extraction format (e.g. 'sfall')."
+                    "description": "'sfall' - enables female strings extraction as supported by sfall"
                 },
                 "no_female": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Explicitly disable female extraction."
+                    "description": "Disable female lines extraction."
                 },
                 "extract_fuzzy": {
                     "type": "boolean",
@@ -59,7 +59,7 @@
                 "all_utf8_except_console": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Process all files as utf-8 except console files (DOS_FILENAMES)."
+                    "description": "Process all files as utf-8 except console files (setup.tra, install.tra)."
                 }
             },
             "additionalProperties": false
