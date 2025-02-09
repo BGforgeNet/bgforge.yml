@@ -55,10 +55,10 @@
                     "default": false,
                     "description": "Process all files as utf-8."
                 },
-                "all_utf8_except_console": {
+                "ansi_console": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Process all files as utf-8 except console files (setup.tra, install.tra)."
+                    "description": "Force ANSI encoding for console files (setup.tra, install.tra)."
                 }
             },
             "additionalProperties": false
