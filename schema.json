@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": ".bgforge.yml configuration",
+    "description": "Schema for .bgforge.yml configuration including translation defaults, Golem, and MLS settings.",
+    "type": "object",
+    "properties": {
+        "translation": {
+            "type": "object",
+            "description": "Translation settings with defaults.",
+            "properties": {
+                "encoding": {
+                    "type": "string",
+                    "default": "cp1252"
+                },
+                "tra_dir": {
+                    "type": "string",
+                    "default": ".",
+                    "description": "Directory with translations"
+                },
+                "src_lang": {
+                    "type": "string",
+                    "default": "english"
+                },
+                "simple_languages": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Extract into language name rather than language code (e.g. pt_BR.po -> portuguese/1.msg)."
+                },
+                "skip_files": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": []
+                },
+                "extract_format": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Optional extraction format (e.g. 'sfall')."
+                },
+                "no_female": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Explicitly disable female extraction."
+                },
+                "extract_fuzzy": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "lowercase": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "all_utf8": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Process all files as utf-8."
+                },
+                "all_utf8_except_console": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Process all files as utf-8 except console files (DOS_FILENAMES)."
+                }
+            },
+            "additionalProperties": false
+        },
+        "golem": {
+            "type": "object",
+            "description": "Golem configuration.",
+            "properties": {
+                "mod_dir": {
+                    "type": "string",
+                    "description": "Module directory for golem."
+                },
+                "platforms": {
+                    "type": "array",
+                    "description": "List of platforms.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "happy": {
+                    "type": "boolean",
+                    "description": "A flag indicating if 'happy' is enabled."
+                }
+            },
+            "required": [
+                "mod_dir",
+                "platforms"
+            ],
+            "additionalProperties": false
+        },
+        "mls": {
+            "type": "object",
+            "description": "MLS configuration.",
+            "properties": {
+                "translation": {
+                    "type": "object",
+                    "description": "Translation settings for MLS.",
+                    "properties": {
+                        "directory": {
+                            "type": "string",
+                            "description": "Directory for MLS translations."
+                        }
+                    },
+                    "required": [
+                        "directory"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
