@@ -12,3 +12,5 @@ set the first line of your `.bgforge.yml` to
 
 Yes, it's just a comment at the top of the file.
 [Example](https://github.com/BGforgeNet/bg2-uniqueartifacts/blob/master/.bgforge.yml).
+
+<img src="example.png" alt="example"/>
